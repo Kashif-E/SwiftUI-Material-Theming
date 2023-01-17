@@ -1,5 +1,6 @@
 # SwiftUI Material Theming
 This repository contains a sample implementation of Material Theming in SwiftUI. It includes custom structs for typography, colors, shapes, and spacing, as well as a ThemeManager and custom ViewModifiers for easy implementation in your own projects.
+![ezgif-4-ad00a3359e](https://user-images.githubusercontent.com/61690178/213010847-35f13ab2-70d5-4ae0-9ad4-8449502c9f88.gif)
 
 # Usage
 To use this theme in your own project, you can copy the structs and classes from the Theme folder and use them in your own code.
