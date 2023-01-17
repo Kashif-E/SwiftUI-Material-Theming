@@ -11,6 +11,7 @@
 		D942E071297728DC0005F8AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E070297728DC0005F8AE /* ContentView.swift */; };
 		D942E073297728DE0005F8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D942E072297728DE0005F8AE /* Assets.xcassets */; };
 		D942E077297728DE0005F8AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D942E076297728DE0005F8AE /* Preview Assets.xcassets */; };
+		D942E07F297728FA0005F8AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E07E297728FA0005F8AE /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		D942E072297728DE0005F8AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D942E074297728DE0005F8AE /* SwiftUIThemingExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIThemingExample.entitlements; sourceTree = "<group>"; };
 		D942E076297728DE0005F8AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D942E07E297728FA0005F8AE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		D942E06D297728DC0005F8AE /* SwiftUIThemingExample */ = {
 			isa = PBXGroup;
 			children = (
+				D942E07D297728EB0005F8AE /* Theme */,
 				D942E06E297728DC0005F8AE /* SwiftUIThemingExampleApp.swift */,
 				D942E070297728DC0005F8AE /* ContentView.swift */,
 				D942E072297728DE0005F8AE /* Assets.xcassets */,
@@ -67,6 +70,14 @@
 				D942E076297728DE0005F8AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D942E07D297728EB0005F8AE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D942E07E297728FA0005F8AE /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D942E07F297728FA0005F8AE /* Theme.swift in Sources */,
 				D942E071297728DC0005F8AE /* ContentView.swift in Sources */,
 				D942E06F297728DC0005F8AE /* SwiftUIThemingExampleApp.swift in Sources */,
 			);
