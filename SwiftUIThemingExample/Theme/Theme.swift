@@ -17,6 +17,27 @@ struct Typography{
     var body1:Font
     var body2:Font
     
+
+    func h6Style(color: Color = Color("OnSurface")) -> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+    func h5Style(color: Color = Color("OnSurface"))-> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+    func h4Style(color: Color = Color("OnSurface")) -> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+    func h3Style(color: Color = Color("OnSurface"))-> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+    func h2Style(color: Color = Color("OnSurface")) -> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+    func h1Style(color: Color = Color("OnSurface")) -> some ViewModifier {
+        return H6Style(defaultTextColor: color)
+    }
+
+    
 }
 struct Colors {
     var primary: Color
@@ -31,7 +52,7 @@ struct Colors {
     var error: Color
     var warning: Color
     var success: Color
-
+    
 }
 
 struct Spacing{
@@ -53,7 +74,7 @@ class Theme : ObservableObject{
     let shapes: Shapes
     let spacing: Spacing
     let typography: Typography
-
+    
     init(colors: Colors, shapes: Shapes, spacing: Spacing, typography: Typography) {
         self.colors = colors
         self.shapes = shapes
@@ -71,11 +92,12 @@ extension Theme {
         
         spacing: Spacing(largeSpacing: 24, mediumSpacing: 16, smallSpacing: 8, extraLargeSpacing: 32),
         
-        typography: Typography(h1: Font.custom("NunitoSans-Bold", size: 3), h2:Font.custom("NunitoSans-Bold", size: 24), h3: Font.custom("NunitoSans-Bold", size: 18), h4: Font.custom("NunitoSans-Bold", size: 14), h5: Font.custom("NunitoSans-Bold", size: 12), h6: Font.custom("NunitoSans-Bold", size: 10), body1: Font.custom("NunitoSans-Regular", size: 14), body2: Font.custom("NunitoSans-Regular", size: 14)))
-   
- static let light = Theme(
+        typography: Typography(h1: Font.custom("NunitoSans-Bold", size: 3), h2:Font.custom("NunitoSans-Bold", size: 24), h3: Font.custom("NunitoSans-Bold", size: 18), h4: Font.custom("NunitoSans-Bold", size: 14), h5: Font.custom("NunitoSans-Bold", size: 12), h6: Font.custom("NunitoSans-Bold", size: 10), body1: Font.custom("NunitoSans-Regular", size: 14), body2: Font.custom("NunitoSans-Regular", size: 14))
+    )
+    
+    static let light = Theme(
         
-    colors: Colors(primary: Color("Primary"), secondary: Color("Secondary"), primaryVariant: Color("PrimaryVariant"), backGround: Color("Background"), surface: Color("Surface"), onPrimary: Color("OnPrimary"), onBackGround: Color("OnBackGround"), onSurface: Color("OnSurface"), onError: Color("OnError"), error: .green, warning: Color("Warning"), success: Color("Success")),
+        colors: Colors(primary: Color("Primary"), secondary: Color("Secondary"), primaryVariant: Color("PrimaryVariant"), backGround: Color("Background"), surface: Color("Surface"), onPrimary: Color("OnPrimary"), onBackGround: Color("OnBackGround"), onSurface: Color("OnSurface"), onError: Color("OnError"), error: .green, warning: Color("Warning"), success: Color("Success")),
         
         shapes: Shapes(largeCornerRadius: 16, mediumCornerRadius: 12, smallCornerRadius: 8),
         
@@ -100,3 +122,86 @@ struct LargeTitleStyle: ViewModifier {
         content.font(theme.typography.h2).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
     }
 }
+
+
+
+struct H6Style :  ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h1).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+struct H5Style :  ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h1).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+struct H4Style :  ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h1).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+struct H3Style :  ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h1).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+struct H2Style : ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h2).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+struct H1Style : ViewModifier {
+    @EnvironmentObject var theme: Theme
+    var defaultTextColor : Color? = Color("OnSurface")
+    
+    init(defaultTextColor: Color? = nil) {
+        self.defaultTextColor = defaultTextColor
+    }
+    
+    func body(content: Content) -> some View {
+        
+        return content.font(theme.typography.h1).foregroundColor(defaultTextColor ?? theme.colors.primaryVariant).multilineTextAlignment(.leading)
+    }
+}
+
+

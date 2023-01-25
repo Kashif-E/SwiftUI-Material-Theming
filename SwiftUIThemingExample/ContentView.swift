@@ -28,6 +28,7 @@ struct ContentView: View {
                 themeManeger.current = .light
 
             }
+            Text("I have got the fonts like compose").modifier(theme.typography.h3Style())
             
             Text("Title styele").modifier(LargeTitleStyle())
         }
